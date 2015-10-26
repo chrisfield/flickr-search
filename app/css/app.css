@@ -1,0 +1,66 @@
+/* app css stylesheet */
+
+md-content {
+  background: #E5E5E5 repeating-linear-gradient(-20deg, #E7E7E7, #E7E7E7 6px, #E5E5E5 9px, #E5E5E5 15px, #E6E6E6 18px) repeat scroll 0px 0px;
+}
+.md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+}
+.md-toolbar-tools md-input-container {
+  padding-left: 10px;
+}
+.md-toolbar-tools button {
+  color: black;
+}
+#picture-list {
+  display: flex;        /* Flex layout so items have equal height  */
+  flex-flow: row wrap;  /* Allow items to wrap into multiple lines */
+  padding: 10px;
+}
+#picture-list > .item {
+  display: flex;        /* Lay out each item using flex layout */
+  flex-flow: column;    /* Lay out item’s contents vertically  */
+  margin: 10px;
+  width: 250px;
+  background-color: cyan;
+  padding-top: 30px;
+}
+#picture-list > .item > img {
+  order: -1;            /* Shift image before other content (in visual order) */
+  align-self: center;   /* Center the image cross-wise (horizontally)         */
+}
+#picture-list > .item > div {
+    margin-top: auto;     /* Auto top margin pushes button to bottom */
+}
+#picture-list > .item > div p {
+    text-align: center;
+}
+.boxed {
+  border: 1px solid #D0D0D0;
+}
+#picture-list md-input-container {
+  font-size: 12px;
+  color: #888888;
+}
+#picture-list md-radio-group {
+  font-size: 12px;
+  color: #888888;
+}
+#picture-list p {
+    text-align: center;
+}
+.md-toolbar-tools {
+  padding-top: 16px;
+  background-image: linear-gradient(to bottom, #d7d7d7, #a0a0a0);
+  background-color: #e7e7e7;
+}
+.footer {
+  padding: 10px 0;
+  background-image: linear-gradient(to bottom, #d7d7d7, #a0a0a0);
+  background-color: #e7e7e7;}
+.footer p {
+  text-align: center;
+}
+

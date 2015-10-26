@@ -1,0 +1,17 @@
+{
+  "name": "cjfi-flickr",
+  "description": "A simple responsive Single-Page-App for showing public flickr photos",
+  "version": "0.0.0",
+  "homepage": "https://github.com/chrisfield",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "angular-route": "1.4.x",
+    "angular-material": "0.11.4",
+    "moment": "2.10.6",
+    "angular-animate": "1.4.7",
+    "angular-resource": "~1.4.7"
+  }
+}

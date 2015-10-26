@@ -1,0 +1,37 @@
+<md-toolbar layout="row">
+  <div class="md-toolbar-tools">
+    <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+      <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
+    </md-button>
+    <h1> Flickr Photos Gallery:</h1>
+    <md-input-container>
+      <label>Search Text</label>
+      <input ng-model="flickrQuery" ng-change="showSearchButton=true">
+    </md-input-container>   
+    <button ng-if="showSearchButton && flickrQuery" ng-click="getData();" ng-init="showSearchButton=false">&#9662;</button>
+  </div>
+</md-toolbar>
+<md-content>
+  <section id="picture-list">
+    <section>
+      <md-input-container>
+        <label>Search this page:</label>
+        <input ng-model="query">
+      </md-input-container>
+      <div class="boxed">
+        <md-radio-group ng-model="orderProp">
+          <md-radio-button value="-datetaken">Newest First</md-radio-button>
+          <md-radio-button value="datetaken">Oldest First</md-radio-button>
+        </md-radio-group>
+      </div>
+      <p>{{displayedPictureList.length}} of {{pictureList.length}}</p>
+    </section>
+    <md-whiteframe class="md-whiteframe-z2 item" layout layout-align="center center" ng-repeat="picture in pictureList | filter:query | orderBy:orderProp as displayedPictureList">
+      <img ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_m.jpg" alt="" />
+      <div>
+        <p>{{picture.title}}</p>
+        <p>{{picture.datetaken | moment}}</p>
+      <div>
+    </md-whiteframe>
+  </section>
+</md-content>
